@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Error from './components/Error';
 import Home from './pages/Home';
 import About from './pages/About';
+import Accomodation from './pages/Accomodation';
+
 
 
 // Set root element
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
     {
       path: "about",
       element: <About />,
+    },
+    {
+      path: "accomodations/:id/",
+      element: <Accomodation />,
     },]
   }
 ]);
