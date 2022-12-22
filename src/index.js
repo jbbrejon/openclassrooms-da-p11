@@ -20,11 +20,19 @@ const Layout = () => (
   </>
 );
 
+const ErrorLayout = () => (
+  <>
+    <Header />
+    <Error />
+    <Outlet />
+  </>
+);
+
 // Set router
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    errorElement: <Error />,
+    errorElement: <ErrorLayout />,
     children: [{
       path: "/",
       element: <Home />,
@@ -34,7 +42,7 @@ const router = createBrowserRouter([
       element: <About />,
     },
     {
-      path: "accomodations/:id/",
+      path: "accomodation/:id/",
       element: <Accomodation />,
     },]
   }
