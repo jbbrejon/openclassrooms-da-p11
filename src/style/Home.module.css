@@ -1,0 +1,38 @@
+.banner {
+    height: 223px;
+    margin-top: 68.36px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.background {
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: -140px;
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    list-style: none;
+}
+
+.section {
+    display: flex;
+    background-color: #F7F7F7;
+    margin-top: 130px;
+    border-radius: 25px;
+}

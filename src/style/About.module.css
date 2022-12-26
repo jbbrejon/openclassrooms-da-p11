@@ -1,0 +1,23 @@
+.banner {
+    height: 223px;
+    margin-top: 68.36px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.background {
+    height: 223px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.7;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    font-weight: 700;
+    font-size: 288px;
+    color: #FF6060;
+    margin-top: 174px;
+}
+
+.message {
+    font-weight: 500;
+    font-size: 36px;
+    color: #FF6060;
+    margin-top: 66px;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #FF6060;
+    margin-top: 182px;
+}

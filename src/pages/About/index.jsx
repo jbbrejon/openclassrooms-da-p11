@@ -1,30 +1,7 @@
-import styled from "styled-components"
 import background from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"
-import Dropdown from "../../components/Dropdown"
+import Collapse from "../../components/Collapse"
+import styles from '../../style/About.module.css'
 
-const StyledBanner = styled('div')`
-height:223px;
-margin-top:68.36px;
-background-color: black;
-border-radius:25px;
-`
-
-const StyledBackgroundPicture = styled('img')`
-height:223px;
-width: 100%;
-object-fit: cover;
-border-radius:25px;
-opacity:0.7;
-`
-
-const StyledSection = styled('section')`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 80%;
-margin: auto;
-`
 
 const dropdownItems = [
     {
@@ -54,19 +31,19 @@ const dropdownItems = [
 function About() {
     return (
         <div>
-            <StyledBanner>
-                <StyledBackgroundPicture src={background} alt="" />
-            </StyledBanner>
-            <StyledSection>
+            <div className={`${styles.banner}`}>
+                <img className={`${styles.background}`} src={background} alt="" />
+            </div>
+            <section className={`${styles.section}`}>
                 {dropdownItems.map(({ id, title, description }) => (
-                    <Dropdown
+                    <Collapse
                         key={id}
                         title={title}
                         description={description}
                     >
-                    </Dropdown>
+                    </Collapse>
                 ))}
-            </StyledSection>
+            </section>
         </div>
     )
 }

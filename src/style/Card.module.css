@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    height: 340px;
+    width: 340px;
+    background-color: #FF6060;
+    border-radius: 10px;
+}
+
+.cover {
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    margin: 20px;
+    height: 45px;
+    color: white;
+    font-family: #FF6060;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -65px;
+}

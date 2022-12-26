@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.logo {
+    height: 62.26px;
+}
+
+.link {
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 57px;
+    text-decoration: none;
+}
