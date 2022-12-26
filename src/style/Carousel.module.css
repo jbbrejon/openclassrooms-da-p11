@@ -1,0 +1,35 @@
+.section {
+    display: flex;
+    margin-top: 25px;
+}
+
+.image {
+    height: 415px;
+    width: 1240px;
+    object-fit: cover;
+    border-radius: 25px;
+    position: absolute;
+}
+
+.left {
+    height: 80px;
+    position: relative;
+    top: 150px;
+    left: 2%;
+}
+
+.right {
+    height: 80px;
+    top: 150px;
+    position: relative;
+    left: 90%;
+}
+
+.index {
+    top: 358px;
+    position: relative;
+    left: 45%;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
