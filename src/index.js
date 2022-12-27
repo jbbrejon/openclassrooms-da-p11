@@ -26,9 +26,12 @@ const Layout = () => (
 
 const ErrorLayout = () => (
   <>
-    <Header />
-    <Error />
-    <Outlet />
+    <div className='container'>
+      <Header />
+      <Error />
+      <Outlet />
+    </div>
+    <Footer />
   </>
 );
 
