@@ -38,6 +38,7 @@ function About() {
                 {dropdownItems.map(({ id, title, description }) => (
                     <Collapse
                         key={id}
+                        type="about"
                         title={title}
                         description={description}
                     >

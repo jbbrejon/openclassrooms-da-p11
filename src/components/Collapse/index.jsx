@@ -27,9 +27,10 @@ font-size: 24px;
 font-weight: 500px;
 `
 
-function Collapse({ title, description }) {
+function Collapse({ type, title, description }) {
     const [isCollapsed, setIsCollapsed] = useState(true)
-
+    console.log(description)
+    const cssType = type;
     function handleClick() {
         if (isCollapsed === true) {
             setIsCollapsed(false);
@@ -38,6 +39,10 @@ function Collapse({ title, description }) {
             setIsCollapsed(true);
         }
 
+    }
+
+    function isArray() {
+        return Array.isArray(description)
     }
 
     return isCollapsed ? (
@@ -49,16 +54,36 @@ function Collapse({ title, description }) {
         </StyledDropdown>
     )
         : (
-            <StyledDropdown>
-                <StyledTitle>
-                    <StyledH2>{title}</StyledH2>
-                    <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
-                </StyledTitle>
 
-                <p className={`${styles.desc}`}>{description}</p>
+            isArray() ? (
+                <StyledDropdown>
+                    <StyledTitle>
+                        <StyledH2>{title}</StyledH2>
+                        <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
+                    </StyledTitle>
 
-            </StyledDropdown>
+                    <ul className={`${styles[cssType]}`}>
+                        {description.map((el) => (
+                            <li key={el}>{el}</li>
+                        ))}
+                    </ul>
+
+                </StyledDropdown>
+            )
+                : (
+                    <StyledDropdown>
+                        <StyledTitle>
+                            <StyledH2>{title}</StyledH2>
+                            <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
+                        </StyledTitle>
+
+                        <p className={`${styles[cssType]}`}>{description}</p>
+
+                    </StyledDropdown>
+                )
+
         )
+
 }
 
 export default Collapse

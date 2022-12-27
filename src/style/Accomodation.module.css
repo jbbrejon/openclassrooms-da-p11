@@ -76,3 +76,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.specs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 582px;
+}

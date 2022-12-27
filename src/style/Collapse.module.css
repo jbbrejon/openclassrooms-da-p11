@@ -1,7 +1,18 @@
-.desc {
+.about {
     display: flex;
     color: #FF6060;
     font-size: 24px;
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 36px 27px 19px 18px;
+}
+
+.accomodation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #FF6060;
+    font-size: 18px;
     background-color: #F6F6F6;
     margin: 0;
     padding: 36px 27px 19px 18px;

@@ -4,6 +4,7 @@ import accomodations from "../../data/logements.json"
 import styles from '../../style/Accomodation.module.css'
 import starFilled from '../../assets/star-filled.svg'
 import starBlank from '../../assets/star-blank.svg'
+import Collapse from '../../components/Collapse'
 
 function Accomodation() {
     const { id } = useParams();
@@ -48,8 +49,24 @@ function Accomodation() {
                 <div >
                     {filledStars} {blankStars}
                 </div>
-
-
+            </div>
+            <div className={`${styles.specs}`}>
+                <div className={`${styles.col}`}>
+                    <Collapse
+                        key="description"
+                        type="accomodation"
+                        title="Description"
+                        description={item[0].description}
+                    ></Collapse>
+                </div>
+                <div className={`${styles.col}`}>
+                    <Collapse
+                        key="equipements"
+                        type="accomodation"
+                        title="Equipements"
+                        description={item[0].equipments}
+                    ></Collapse>
+                </div>
             </div>
         </div>
     )
