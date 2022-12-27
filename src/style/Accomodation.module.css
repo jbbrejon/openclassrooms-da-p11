@@ -48,3 +48,31 @@
     object-fit: cover;
     border-radius: 50px;
 }
+
+
+
+.properties2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.tag {
+    height: 25px;
+    background-color: #FF6060;
+    color: white;
+    font-size: 500;
+    font-weight: 14px;
+    margin-right: 10px;
+    padding: 0 25px 0 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
