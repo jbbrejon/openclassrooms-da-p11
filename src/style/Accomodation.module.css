@@ -1,0 +1,50 @@
+.properties {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.accomodation {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+.location {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+
+.host {
+    display: flex;
+    align-items: center;
+}
+
+.hostname {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hostpicture {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50px;
+}
