@@ -7,39 +7,48 @@ import { useState } from 'react';
 function Carousel({ pictures }) {
 
     let length = pictures.length;
-    console.log(length)
     const [position, setPosition] = useState(0)
 
     function nextPicture() {
         if (position === length - 1) {
             setPosition(0);
-            console.log(position);
         }
         else {
             setPosition(position + 1);
-            console.log(position);
         }
     }
 
     function previousPicture() {
         if (position === 0) {
             setPosition(length - 1)
-            console.log(position);
         }
         else {
             setPosition(position - 1);
-            console.log(position);
+        }
+    }
+    // Check if pictures array contains only one element
+    function isSingle() {
+        if (length === 1) {
+            return true
+        }
+        else {
+            return false
         }
     }
 
-    return (
+    return isSingle() ? (
         <section className={`${styles.section}`}>
             <img className={`${styles.image}`} src={pictures[position]} alt="" />
-            <img onClick={previousPicture} className={`${styles.left}`} src={chevrontLeft} alt="" />
-            <img onClick={nextPicture} className={`${styles.right}`} src={chevrontRight} alt="" />
-            <div className={`${styles.index}`}>{position + 1}/{length}</div>
         </section>
     )
+        : (
+            <section className={`${styles.section}`}>
+                <img className={`${styles.image}`} src={pictures[position]} alt="" />
+                <img onClick={previousPicture} className={`${styles.left}`} src={chevrontLeft} alt="" />
+                <img onClick={nextPicture} className={`${styles.right}`} src={chevrontRight} alt="" />
+                <div className={`${styles.index}`}>{position + 1}/{length}</div>
+            </section>
+        )
 }
 
 export default Carousel
