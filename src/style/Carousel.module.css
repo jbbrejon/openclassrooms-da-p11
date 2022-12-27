@@ -1,6 +1,7 @@
 .section {
     display: flex;
     margin-top: 25px;
+    height: 415px;
 }
 
 .image {
