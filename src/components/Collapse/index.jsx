@@ -33,13 +33,9 @@ function Collapse({ title, description }) {
     function handleClick() {
         if (isCollapsed === true) {
             setIsCollapsed(false);
-            console.log(isCollapsed);
-
-
         }
         else {
             setIsCollapsed(true);
-            console.log(isCollapsed)
         }
 
     }
