@@ -7,6 +7,7 @@ import Error from './components/Error';
 import Home from './pages/Home';
 import About from './pages/About';
 import Accomodation from './pages/Accomodation';
+import Footer from './components/Footer';
 
 
 
@@ -15,8 +16,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const Layout = () => (
   <>
-    <Header />
-    <Outlet />
+    <div className='container'>
+      <Header />
+      <Outlet />
+    </div>
+    <Footer />
   </>
 );
 

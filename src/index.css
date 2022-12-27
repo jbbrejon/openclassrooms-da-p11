@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-#root {
+.container {
   display: flex;
   flex-direction: column;
   width: 1240px;
