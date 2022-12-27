@@ -28,7 +28,7 @@ font-weight: 500px;
 `
 
 function Collapse({ type, title, description }) {
-    const [isCollapsed, setIsCollapsed] = useState(true)
+    const [isCollapsed, setIsCollapsed] = useState(false)
     console.log(description)
     const cssType = type;
     function handleClick() {
@@ -76,12 +76,9 @@ function Collapse({ type, title, description }) {
                             <StyledH2>{title}</StyledH2>
                             <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
                         </StyledTitle>
-
                         <p className={`${styles[cssType]}`}>{description}</p>
-
                     </StyledDropdown>
                 )
-
         )
 
 }
