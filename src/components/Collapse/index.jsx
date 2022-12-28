@@ -29,7 +29,6 @@ font-weight: 500px;
 
 function Collapse({ type, title, description }) {
     const [isCollapsed, setIsCollapsed] = useState(false)
-    console.log(description)
     const cssType = type;
     function handleClick() {
         if (isCollapsed === true) {
