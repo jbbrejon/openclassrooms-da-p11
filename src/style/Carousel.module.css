@@ -2,7 +2,10 @@
     display: flex;
     margin-top: 25px;
     height: 415px;
+    width: 100%;
 }
+
+
 
 .image {
     height: 415px;
