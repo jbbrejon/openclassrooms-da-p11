@@ -1,5 +1,14 @@
-/*
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "articles";
+    grid-template-columns: 1fr;
+}
+
 .banner {
+    grid-area: banner;
     height: 223px;
     margin-top: 68.36px;
     background-color: black;
@@ -14,6 +23,8 @@
     opacity: 0.5;
 }
 
+
+
 .title {
     display: flex;
     justify-content: center;
@@ -24,13 +35,22 @@
 }
 
 
+
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px;
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 340px);
+    align-content: space-between;
+    justify-content: center;
+    gap: 50px 60px;
     list-style: none;
+    background-color: #F7F7F7;
+    margin-top: 43px;
+    padding: 56px 50px 56px 50px;
+    border-radius: 25px;
 }
 
+/*
 .section {
     display: flex;
     background-color: #F7F7F7;

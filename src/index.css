@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Todo : switch from flex to grid 
+/* Todo : switch from flex to grid  
 .container {
   display: flex;
   flex-direction: column;
@@ -11,4 +11,16 @@ body {
   margin: auto;
   padding: 0 100px;
 }
+
 */
+
+.container {
+  max-width: 1240px;
+  padding: 0 100px;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-columns: 1fr;
+  margin: auto;
+}

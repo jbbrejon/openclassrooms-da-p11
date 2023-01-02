@@ -1,11 +1,7 @@
-/*
-
 .card {
     display: flex;
     flex-direction: column;
-    margin: 25px;
     height: 340px;
-    width: 340px;
     background-color: #FF6060;
     border-radius: 10px;
 }
@@ -33,5 +29,3 @@
     font-weight: 500;
     margin-top: -65px;
 }
-
-*/

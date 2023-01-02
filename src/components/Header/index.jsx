@@ -8,7 +8,7 @@ function Header() {
     return (
         <header className={`${styles.header}`}>
             <img className={`${styles.logo}`} src={logo} alt="logo" />
-            <nav>
+            <nav className={`${styles.nav}`}>
                 <Link className={`${styles.link}`} to="/">Accueil</Link>
                 <Link className={`${styles.link}`} to="/about">A propos</Link>
             </nav>

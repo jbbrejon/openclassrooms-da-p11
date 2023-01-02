@@ -18,3 +18,32 @@
     text-decoration: none;
 }
 */
+
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-areas:
+        "logo nav";
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+    margin-top: 40px;
+}
+
+.logo {
+    height: 62.26px;
+    grid-area: logo;
+    justify-self: start;
+}
+
+.nav {
+    grid-area: nav;
+    justify-self: end;
+}
+
+.link {
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 57px;
+    text-decoration: none;
+}
