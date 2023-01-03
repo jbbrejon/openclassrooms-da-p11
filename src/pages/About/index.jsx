@@ -30,7 +30,7 @@ const dropdownItems = [
 
 function About() {
     return (
-        <div>
+        <main className={`${styles.main}`}>
             <div className={`${styles.banner}`}>
                 <img className={`${styles.background}`} src={background} alt="" />
             </div>
@@ -45,7 +45,7 @@ function About() {
                     </Collapse>
                 ))}
             </section>
-        </div>
+        </main>
     )
 }
 

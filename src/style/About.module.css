@@ -1,6 +1,14 @@
-/* 
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "articles";
+    grid-template-columns: 1fr;
+}
 
 .banner {
+    grid-area: banner;
     height: 223px;
     margin-top: 68.36px;
     background-color: black;
@@ -12,15 +20,12 @@
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
+    grid-area: articles;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: auto;
+    padding: 0 8.8%;
 }
-*/

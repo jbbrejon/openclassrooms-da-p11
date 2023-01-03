@@ -89,3 +89,122 @@
 }
 
 */
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "carousel"
+        "properties"
+        "properties2"
+        "collapsed";
+    grid-template-columns: 1fr;
+}
+
+.properties {
+    grid-area: properties;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas:
+        "accomodation host ";
+    grid-template-columns: 1fr 1fr;
+}
+
+.accomodation {
+    grid-area: accomodation;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+.location {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+
+.host {
+    grid-area: host;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+
+.hostname {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hostpicture {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+
+
+.properties2 {
+    grid-area: properties2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.tag {
+    height: 25px;
+    background-color: #FF6060;
+    color: white;
+    font-size: 500;
+    font-weight: 14px;
+    margin-right: 10px;
+    padding: 0 25px 0 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specs {
+    grid-area: collapsed;
+    /*display: flex;
+    justify-content: space-between;*/
+    display: grid;
+    grid-template-areas:
+        "description equipements ";
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 6%;
+}
+
+.desc {
+    grid-area: description;
+}
+
+.equip {
+    grid-area: equipements;
+}

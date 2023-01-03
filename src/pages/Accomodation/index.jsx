@@ -28,7 +28,7 @@ function Accomodation() {
 
 
     return (
-        <div>
+        <main className={`${styles.main}`}>
             <Carousel pictures={item[0].pictures}></Carousel>
             <div className={`${styles.properties}`}>
                 <div className={`${styles.accomodation}`}>
@@ -51,7 +51,7 @@ function Accomodation() {
                 </div>
             </div>
             <div className={`${styles.specs}`}>
-                <div className={`${styles.col}`}>
+                <div className={`${styles.desc}`}>
                     <Collapse
                         key="description"
                         type="accomodation"
@@ -59,7 +59,7 @@ function Accomodation() {
                         description={item[0].description}
                     ></Collapse>
                 </div>
-                <div className={`${styles.col}`}>
+                <div className={`${styles.equip}`}>
                     <Collapse
                         key="equipements"
                         type="accomodation"
@@ -68,7 +68,7 @@ function Accomodation() {
                     ></Collapse>
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

@@ -43,10 +43,13 @@ function Carousel({ pictures }) {
     )
         : (
             <section className={`${styles.section}`}>
-                <img className={`${styles.image}`} src={pictures[position]} alt="" />
-                <img onClick={previousPicture} className={`${styles.left}`} src={chevrontLeft} alt="" />
-                <img onClick={nextPicture} className={`${styles.right}`} src={chevrontRight} alt="" />
-                <div className={`${styles.index}`}>{position + 1}/{length}</div>
+                <div className={`${styles.banner}`}>
+                    <img className={`${styles.background}`} src={pictures[position]} alt="" />
+                    <img onClick={previousPicture} className={`${styles.left}`} src={chevrontLeft} alt="" />
+                    <img onClick={nextPicture} className={`${styles.right}`} src={chevrontRight} alt="" />
+                    <div className={`${styles.indexcontainer}`}><div className={`${styles.index}`} >{position + 1}/{length}</div></div>
+                </div>
+
             </section>
         )
 }

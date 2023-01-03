@@ -1,23 +1,33 @@
 .section {
-    display: flex;
+    grid-area: carousel;
+    display: grid;
+    grid-template-areas:
+        "banner";
+    grid-template-columns: 1fr;
     margin-top: 25px;
+}
+
+
+.banner {
+    grid-area: banner;
+    height: 415px;
+    background-color: black;
+    border-radius: 25px;
+    position: relative;
+}
+
+.background {
     height: 415px;
     width: 100%;
-}
-
-
-
-.image {
-    height: 415px;
-    width: 1240px;
     object-fit: cover;
     border-radius: 25px;
-    position: absolute;
+    opacity: 0.8;
 }
+
 
 .left {
     height: 80px;
-    position: relative;
+    position: absolute;
     top: 150px;
     left: 2%;
 }
@@ -25,14 +35,18 @@
 .right {
     height: 80px;
     top: 150px;
-    position: relative;
-    left: 90%;
+    position: absolute;
+    right: 2%
+}
+
+
+.indexcontainer {
+    top: 358px;
+    position: absolute;
+    left: 50%;
 }
 
 .index {
-    top: 358px;
-    position: relative;
-    left: 45%;
     font-size: 18px;
     font-weight: 500;
     color: white;

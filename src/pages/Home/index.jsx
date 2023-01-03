@@ -6,7 +6,7 @@ import styles from '../../style/Home.module.css'
 
 function Home() {
     return (
-        <main>
+        <main className={`${styles.main}`}>
             <div className={`${styles.banner}`}>
                 <img className={`${styles.background}`} src={background} alt="" />
                 <h1 className={`${styles.title}`}>Chez vous, partout et ailleurs</h1>
