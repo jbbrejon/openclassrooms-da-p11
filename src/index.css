@@ -25,7 +25,7 @@ body {
   margin: auto;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
   .container {
     padding: 20px;

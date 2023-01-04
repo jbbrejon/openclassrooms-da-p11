@@ -4,6 +4,13 @@
     height: 340px;
     background-color: #FF6060;
     border-radius: 10px;
+    position: relative;
+}
+
+.background {
+    background: linear-gradient(#FFF, #000 50%);
+    height: 340px;
+    border-radius: 10px;
 }
 
 .cover {
@@ -11,6 +18,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    opacity: 0.7;
 }
 
 .link {
@@ -27,17 +35,24 @@
     font-family: #FF6060;
     font-size: 18px;
     font-weight: 500;
-    margin-top: -65px;
+    position: absolute;
+    top: 250px;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
     .card {
+        height: 255px;
+        width: 100%;
+    }
+
+    .background {
         height: 255px;
     }
 
     .cover {
         height: 255px;
+        width: 100%;
     }
 
 }

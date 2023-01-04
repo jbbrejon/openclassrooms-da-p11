@@ -27,7 +27,7 @@ footer {
     justify-self: center;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
     .info {
         font-size: 12px;

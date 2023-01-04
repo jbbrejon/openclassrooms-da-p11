@@ -11,11 +11,11 @@ function Accomodation() {
     let item = accomodations.filter((accomodation) => accomodation.id === id)
 
     function Positive() {
-        return <img src={starFilled} alt="" />
+        return <img className={`${styles.star}`} src={starFilled} alt="" />
     }
 
     function Negative() {
-        return <img src={starBlank} alt="" />
+        return <img className={`${styles.star}`} src={starBlank} alt="" />
     }
 
     const filledStars = Array.from({ length: item[0].rating }, (_, index) => {
@@ -39,14 +39,14 @@ function Accomodation() {
                     <div className={`${styles.hostname}`}>{item[0].host.name}</div>
                     <img className={`${styles.hostpicture}`} src={item[0].host.picture} alt="" />
                 </div>
-            </div>
-            <div className={`${styles.properties2}`}>
+
+
                 <ul className={`${styles.tags}`}>
                     {item[0].tags.map((tag) => (
                         <li className={`${styles.tag}`} key={tag}>{tag}</li>
                     ))}
                 </ul>
-                <div >
+                <div className={`${styles.stars}`}>
                     {filledStars} {blankStars}
                 </div>
             </div>
@@ -54,7 +54,8 @@ function Accomodation() {
                 <div className={`${styles.desc}`}>
                     <Collapse
                         key="description"
-                        type="accomodation"
+                        p="accomodation-para"
+                        h="accomodation-title"
                         title="Description"
                         description={item[0].description}
                     ></Collapse>
@@ -62,7 +63,8 @@ function Accomodation() {
                 <div className={`${styles.equip}`}>
                     <Collapse
                         key="equipements"
-                        type="accomodation"
+                        p="accomodation-para"
+                        h="accomodation-title"
                         title="Equipements"
                         description={item[0].equipments}
                     ></Collapse>

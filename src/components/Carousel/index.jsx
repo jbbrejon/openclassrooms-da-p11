@@ -38,7 +38,9 @@ function Carousel({ pictures }) {
 
     return isSingle() ? (
         <section className={`${styles.section}`}>
-            <img className={`${styles.image}`} src={pictures[position]} alt="" />
+            <div className={`${styles.banner}`}>
+                <img className={`${styles.background}`} src={pictures[position]} alt="" />
+            </div>
         </section>
     )
         : (

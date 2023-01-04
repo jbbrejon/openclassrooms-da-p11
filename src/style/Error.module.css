@@ -40,7 +40,7 @@
     margin-top: 182px;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
     .error {
         font-size: 96px;

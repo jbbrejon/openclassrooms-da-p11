@@ -1,4 +1,4 @@
-.about {
+.about-para {
     color: #FF6060;
     font-size: 24px;
     background-color: #F6F6F6;
@@ -6,8 +6,7 @@
     padding: 36px 27px 19px 18px;
 }
 
-.accomodation {
-
+.accomodation-para {
     list-style: none;
     color: #FF6060;
     font-size: 18px;
@@ -15,6 +14,8 @@
     margin: 0;
     padding: 36px 27px 19px 18px;
 }
+
+
 
 .dropdown {
     display: flex;
@@ -29,41 +30,58 @@
     align-items: center;
     background-color: #FF6060;
     color: white;
-    padding: 10px 18px;
+    padding: 0 18px;
     border-radius: 5px;
     margin: 0;
     height: 47px;
 }
 
-.title {
+
+
+.about-title {
     margin: 0;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 500px;
 }
+
+.accomodation-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500px;
+}
+
 
 .chevron {
     height: 23.86px;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
     .bar {
         height: 30px;
     }
 
-    .title {
-        font-size: 19px;
-    }
-
     .chevron {
-        height: 15.2px;
+        height: 9px;
     }
 
-    .about {
+    .about-para {
         font-size: 12px;
         background-color: #F6F6F6;
         margin: 0;
-        padding: 23px 7px 52px 11px;
+        padding: 17px 7px 52px 11px;
+    }
+
+    .accomodation-para {
+        font-size: 12px;
+        background-color: #F6F6F6;
+        margin: 0;
+        padding: 17px 7px 1px 11px;
+    }
+
+    .about-title,
+    .accomodation-title {
+        font-size: 13px;
     }
 
 }

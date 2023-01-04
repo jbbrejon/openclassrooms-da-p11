@@ -25,9 +25,10 @@
     font-weight: 500;
     margin-left: 57px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
-@media (width <=700px) {
+@media (width <=992px) {
 
     .header {
         margin-top: 0;

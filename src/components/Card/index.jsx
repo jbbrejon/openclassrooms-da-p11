@@ -4,7 +4,9 @@ import styles from '../../style/Card.module.css'
 function Card({ id, title, cover }) {
     return (
         <li className={`${styles.card}`}>
-            <img className={`${styles.cover}`} src={cover} alt="" />
+            <div className={`${styles.background}`}>
+                <img className={`${styles.cover}`} src={cover} alt="" />
+            </div>
             <h2 className={`${styles.title}`}>
                 <Link className={`${styles.link}`} to={`/accomodation/${id}`}>{title}</Link>
             </h2>

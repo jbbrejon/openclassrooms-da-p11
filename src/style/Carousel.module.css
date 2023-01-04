@@ -51,3 +51,33 @@
     font-weight: 500;
     color: white;
 }
+
+@media (width <=992px) {
+
+    .banner {
+        height: 255px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .background {
+        height: 255px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .left {
+        height: 20px;
+        top: 50%;
+    }
+
+    .right {
+        height: 20px;
+        top: 50%;
+    }
+
+    .indexcontainer {
+        display: none;
+    }
+
+}
