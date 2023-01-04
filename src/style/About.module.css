@@ -26,6 +26,17 @@
 .section {
     grid-area: articles;
     display: grid;
-    justify-content: center;
     padding: 0 8.8%;
+}
+
+@media (width <=700px) {
+
+    .banner {
+        margin-top: 20px;
+    }
+
+    .section {
+        padding: 0;
+    }
+
 }

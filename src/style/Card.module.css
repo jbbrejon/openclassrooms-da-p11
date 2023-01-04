@@ -29,3 +29,15 @@
     font-weight: 500;
     margin-top: -65px;
 }
+
+@media (width <=700px) {
+
+    .card {
+        height: 255px;
+    }
+
+    .cover {
+        height: 255px;
+    }
+
+}

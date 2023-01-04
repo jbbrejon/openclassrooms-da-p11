@@ -1,31 +1,8 @@
-import styled from 'styled-components'
-import colors from '../../utils/style/colors'
 import chevronUp from '../../assets/chevron-up.svg'
 import chevronDown from '../../assets/chevron-down.svg'
 import { useState } from 'react'
 import styles from '../../style/Collapse.module.css'
 
-const StyledDropdown = styled('div')`
-display : flex;
-flex-direction: column;
-width : 100%;
-margin-top: 40px;
-`
-
-const StyledTitle = styled('div')`
-display : flex;
-justify-content: space-between;
-background-color: ${colors.primary};
-color: white;
-padding: 10px 18px;
-border-radius : 5px;
-margin:0;
-`
-const StyledH2 = styled('h2')`
-margin: 0;
-font-size: 24px;
-font-weight: 500px;
-`
 
 function Collapse({ type, title, description }) {
     const [isCollapsed, setIsCollapsed] = useState(false)
@@ -37,7 +14,6 @@ function Collapse({ type, title, description }) {
         else {
             setIsCollapsed(true);
         }
-
     }
 
     function isArray() {
@@ -45,21 +21,21 @@ function Collapse({ type, title, description }) {
     }
 
     return isCollapsed ? (
-        <StyledDropdown>
-            <StyledTitle>
-                <StyledH2>{title}</StyledH2>
-                <img src={chevronDown} alt="chevron-down" onClick={() => handleClick()} />
-            </StyledTitle>
-        </StyledDropdown>
+        <div className={`${styles.dropdown}`} >
+            <div className={`${styles.bar}`} >
+                <h2 className={`${styles.title}`}>{title}</h2>
+                <img className={`${styles.chevron}`} src={chevronDown} alt="chevron-down" onClick={() => handleClick()} />
+            </div>
+        </div>
     )
         : (
 
             isArray() ? (
-                <StyledDropdown>
-                    <StyledTitle>
-                        <StyledH2>{title}</StyledH2>
-                        <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
-                    </StyledTitle>
+                <div className={`${styles.dropdown}`} >
+                    <div className={`${styles.bar}`} >
+                        <h2 className={`${styles.title}`}>{title}</h2>
+                        <img className={`${styles.chevron}`} src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
+                    </div>
 
                     <ul className={`${styles[cssType]}`}>
                         {description.map((el) => (
@@ -67,16 +43,16 @@ function Collapse({ type, title, description }) {
                         ))}
                     </ul>
 
-                </StyledDropdown>
+                </div>
             )
                 : (
-                    <StyledDropdown>
-                        <StyledTitle>
-                            <StyledH2>{title}</StyledH2>
-                            <img src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
-                        </StyledTitle>
+                    <div className={`${styles.dropdown}`} >
+                        <div className={`${styles.bar}`} >
+                            <h2 className={`${styles.title}`}>{title}</h2>
+                            <img className={`${styles.chevron}`} src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
+                        </div>
                         <p className={`${styles[cssType]}`}>{description}</p>
-                    </StyledDropdown>
+                    </div>
                 )
         )
 

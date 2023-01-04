@@ -24,3 +24,11 @@ body {
   grid-template-columns: 1fr;
   margin: auto;
 }
+
+@media (width <=700px) {
+
+  .container {
+    padding: 20px;
+  }
+
+}

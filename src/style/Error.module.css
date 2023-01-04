@@ -1,35 +1,3 @@
-/*
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.error {
-    font-weight: 700;
-    font-size: 288px;
-    color: #FF6060;
-    margin-top: 174px;
-}
-
-.message {
-    font-weight: 500;
-    font-size: 36px;
-    color: #FF6060;
-    margin-top: 66px;
-}
-
-.link {
-    font-weight: 500;
-    font-size: 18px;
-    color: #FF6060;
-    margin-top: 182px;
-}
-
-*/
-
 .main {
     display: grid;
     grid-area: main;
@@ -70,4 +38,25 @@
     font-size: 18px;
     color: #FF6060;
     margin-top: 182px;
+}
+
+@media (width <=700px) {
+
+    .error {
+        font-size: 96px;
+        margin-top: 195px;
+    }
+
+    .message {
+        font-size: 18px;
+        margin-top: 11px;
+        padding: 0 37px;
+        text-align: center;
+    }
+
+    .link {
+        font-size: 14px;
+        margin-top: 133px;
+    }
+
 }

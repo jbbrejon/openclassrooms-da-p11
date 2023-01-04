@@ -1,24 +1,3 @@
-/*
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.logo {
-    height: 62.26px;
-}
-
-.link {
-    color: #FF6060;
-    font-size: 24px;
-    font-weight: 500;
-    margin-left: 57px;
-    text-decoration: none;
-}
-*/
-
 .header {
     display: grid;
     grid-area: header;
@@ -46,4 +25,21 @@
     font-weight: 500;
     margin-left: 57px;
     text-decoration: none;
+}
+
+@media (width <=700px) {
+
+    .header {
+        margin-top: 0;
+    }
+
+    .logo {
+        height: 43px;
+    }
+
+    .link {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
 }

@@ -15,3 +15,55 @@
     margin: 0;
     padding: 36px 27px 19px 18px;
 }
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin: 0;
+    height: 47px;
+}
+
+.title {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500px;
+}
+
+.chevron {
+    height: 23.86px;
+}
+
+@media (width <=700px) {
+
+    .bar {
+        height: 30px;
+    }
+
+    .title {
+        font-size: 19px;
+    }
+
+    .chevron {
+        height: 15.2px;
+    }
+
+    .about {
+        font-size: 12px;
+        background-color: #F6F6F6;
+        margin: 0;
+        padding: 23px 7px 52px 11px;
+    }
+
+}
