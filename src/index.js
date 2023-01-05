@@ -1,17 +1,70 @@
+// Import React modules
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
+// Import css
+import './index.css';
+
+// Import components
+import Header from './components/Header';
+import Error from './components/Error';
+import Footer from './components/Footer';
+
+// Import pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Accomodation from './pages/Accomodation';
+
+// Set root element
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+// Set standard layout (Header/Page/Footer)
+const Layout = () => (
+  <>
+    <div className='container'>
+      <Header />
+      <Outlet />
+    </div>
+    <Footer />
+  </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Set error layout (Header/Error component/Footer)
+const ErrorLayout = () => (
+  <>
+    <div className='container'>
+      <Header />
+      <Error />
+      <Outlet />
+    </div>
+    <Footer />
+  </>
+);
+
+// Router configuration
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    errorElement: <ErrorLayout />,
+    children: [{
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "about",
+      element: <About />,
+    },
+    {
+      path: "accomodation/:id/",
+      element: <Accomodation />,
+    },]
+  }
+]);
+
+
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
