@@ -1,0 +1,61 @@
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+        "error"
+        "message"
+        "link";
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    grid-area: error;
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    font-size: 288px;
+    color: #FF6060;
+    margin-top: 174px;
+}
+
+.message {
+    grid-area: message;
+    align-self: center;
+    justify-self: center;
+    font-size: 36px;
+    color: #FF6060;
+    margin-top: 66px;
+}
+
+.link {
+    grid-area: link;
+    align-self: center;
+    justify-self: center;
+    font-size: 18px;
+    color: #FF6060;
+    margin-top: 182px;
+}
+
+/* Media queries */
+@media (width <=992px) {
+
+    .error {
+        font-size: 96px;
+        margin-top: 195px;
+    }
+
+    .message {
+        font-size: 18px;
+        margin-top: 11px;
+        padding: 0 37px;
+        text-align: center;
+    }
+
+    .link {
+        font-size: 14px;
+        margin-top: 133px;
+    }
+
+}
