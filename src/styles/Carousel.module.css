@@ -1,0 +1,83 @@
+.section {
+    grid-area: carousel;
+    display: grid;
+    grid-template-areas:
+        "banner";
+    grid-template-columns: 1fr;
+    margin-top: 25px;
+}
+
+
+.banner {
+    grid-area: banner;
+    height: 415px;
+    background-color: black;
+    border-radius: 25px;
+    position: relative;
+}
+
+.background {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+
+.left {
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: 2%;
+}
+
+.right {
+    height: 80px;
+    top: 150px;
+    position: absolute;
+    right: 2%
+}
+
+
+.indexcontainer {
+    top: 358px;
+    position: absolute;
+    left: 50%;
+}
+
+.index {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+@media (width <=992px) {
+
+    .banner {
+        height: 255px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .background {
+        height: 255px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .left {
+        height: 20px;
+        top: 50%;
+    }
+
+    .right {
+        height: 20px;
+        top: 50%;
+    }
+
+    .indexcontainer {
+        display: none;
+    }
+
+}
