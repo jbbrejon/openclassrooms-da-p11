@@ -11,7 +11,7 @@ function Card({ id, title, cover }) {
                 <img className={`${styles.cover}`} src={cover} alt="" />
             </div>
             <h2 className={`${styles.title}`}>
-                <Link className={`${styles.link}`} to={`/accomodation/${id}`}>{title}</Link>
+                <Link className={`${styles.link}`} to={`/logement/${id}`}>{title}</Link>
             </h2>
         </li>
     )
