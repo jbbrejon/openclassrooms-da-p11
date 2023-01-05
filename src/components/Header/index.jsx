@@ -1,5 +1,5 @@
 // Import Reactr module
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // Import assets
 import logo from '../../assets/logo.svg'
@@ -10,12 +10,25 @@ import styles from '../../styles/Header.module.css'
 
 
 function Header() {
+    let activeStyle = {
+        textDecoration: "underline",
+    };
     return (
         <header className={`${styles.header}`}>
             <img className={`${styles.logo}`} src={logo} alt="logo" />
             <nav className={`${styles.nav}`}>
-                <Link className={`${styles.link}`} to="/">Accueil</Link>
-                <Link className={`${styles.link}`} to="/a-propos">A propos</Link>
+                <NavLink
+                    className={`${styles.navlink}`}
+                    style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                    to="/">Accueil</NavLink>
+                <NavLink
+                    className={`${styles.navlink}`}
+                    style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                    to="/a-propos">A propos</NavLink>
             </nav>
         </header>
     )
