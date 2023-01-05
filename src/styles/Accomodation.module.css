@@ -1,0 +1,197 @@
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "carousel"
+        "properties"
+        "properties2"
+        "collapsed";
+    grid-template-columns: 1fr;
+}
+
+.properties {
+    grid-area: properties;
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas:
+        "accomodation host "
+        "tags stars ";
+    grid-template-columns: 1fr 1fr;
+}
+
+.accomodation {
+    grid-area: accomodation;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.location {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+
+.host {
+    grid-area: host;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+
+.hostname {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hostpicture {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+
+
+
+
+.tags {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.tag {
+    height: 25px;
+    min-width: 105px;
+    background-color: #FF6060;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars {
+    grid-area: stars;
+    justify-self: end;
+    padding-top: 24px;
+}
+
+.specs {
+    grid-area: collapsed;
+    /*display: flex;
+    justify-content: space-between;*/
+    display: grid;
+    grid-template-areas:
+        "description equipements ";
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 6%;
+}
+
+.desc {
+    grid-area: description;
+}
+
+.equip {
+    grid-area: equipements;
+}
+
+.star {
+    height: 30px;
+}
+
+
+@media (width <=992px) {
+    .specs {
+        grid-template-areas:
+            "description"
+            "equipements";
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .properties {
+        grid-template-areas:
+            "accomodation accomodation "
+            "tags tags"
+            "stars host";
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .tags {
+        justify-self: start;
+    }
+
+    .host {
+        justify-self: end;
+    }
+
+    .tag {
+        height: 18px;
+        width: 74px;
+        font-size: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        padding: 0;
+
+    }
+
+    .stars {
+        justify-self: start;
+    }
+
+    .star {
+        height: 15px;
+    }
+
+    .host {
+        margin-top: 16px;
+    }
+
+    .hostpicture {
+        height: 32px;
+        width: 32px;
+    }
+
+    .hostname {
+        font-size: 12px;
+        width: 50px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .location {
+        font-size: 14px;
+    }
+
+}
