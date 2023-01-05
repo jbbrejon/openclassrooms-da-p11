@@ -21,7 +21,6 @@ footer {
     grid-area: info;
     color: white;
     font-size: 24px;
-    font-weight: 500;
     height: 46px;
     margin-top: 29px;
     justify-self: center;
@@ -33,6 +32,5 @@ footer {
     .info {
         font-size: 12px;
     }
-
 
 }
