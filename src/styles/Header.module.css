@@ -21,13 +21,13 @@
 
 .link {
     font-size: 24px;
-    font-weight: 500;
     color: #FF6060;
     text-decoration: none;
     white-space: nowrap;
     margin-left: 57px;
 }
 
+/* Media queries */
 @media (width <=992px) {
 
     .header {
