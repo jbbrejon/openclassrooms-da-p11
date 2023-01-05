@@ -1,0 +1,45 @@
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-areas:
+        "logo nav";
+    grid-template-columns: 1fr 1fr;
+    align-content: space-between;
+    margin-top: 40px;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: start;
+    height: 62.26px;
+}
+
+.nav {
+    grid-area: nav;
+    justify-self: end;
+}
+
+.link {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FF6060;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 57px;
+}
+
+@media (width <=992px) {
+
+    .header {
+        margin-top: 0;
+    }
+
+    .logo {
+        height: 43px;
+    }
+
+    .link {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
