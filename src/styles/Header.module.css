@@ -19,12 +19,16 @@
     justify-self: end;
 }
 
-.link {
+.navlink {
     font-size: 24px;
     color: #FF6060;
     text-decoration: none;
     white-space: nowrap;
     margin-left: 57px;
+}
+
+.navlink .active {
+    color: aqua;
 }
 
 /* Media queries */
