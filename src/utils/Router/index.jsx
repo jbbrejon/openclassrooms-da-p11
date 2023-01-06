@@ -1,4 +1,4 @@
-// Import React modules
+// Import React router modules
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 // Import components
@@ -53,7 +53,5 @@ const Router = createBrowserRouter([
         },]
     }
 ]);
-
-
 
 export default Router
