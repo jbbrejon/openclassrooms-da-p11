@@ -20,18 +20,22 @@ function Accomodation() {
     const { id } = useParams();
     let item = accomodations.filter((accomodation) => accomodation.id === id)
 
+    // Return filled star
     function Positive() {
         return <img className={`${styles.star}`} src={starFilled} alt="" />
     }
 
+    // Return blank star
     function Negative() {
         return <img className={`${styles.star}`} src={starBlank} alt="" />
     }
 
+    // Return list of filled stars (positive opinion)
     const filledStars = Array.from({ length: item[0].rating }, (_, index) => {
         return <Positive key={index} />;
     });
 
+    // Return list of blank stars (negative opinion)
     const blankStars = Array.from({ length: 5 - item[0].rating }, (_, index) => {
         return <Negative key={index} />;
     });
