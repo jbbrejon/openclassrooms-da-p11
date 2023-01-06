@@ -11,9 +11,12 @@ import chevrontRight from '../../assets/chevron-right.svg'
 
 function Carousel({ pictures }) {
 
+    // Get length of pictures array
     let length = pictures.length;
+
     const [position, setPosition] = useState(0)
 
+    // Display next picture
     function nextPicture() {
         if (position === length - 1) {
             setPosition(0);
@@ -23,6 +26,7 @@ function Carousel({ pictures }) {
         }
     }
 
+    // Display previous picture
     function previousPicture() {
         if (position === 0) {
             setPosition(length - 1)
