@@ -13,6 +13,8 @@ function Collapse({ styleH, styleP, title, description }) {
     const [isCollapsed, setIsCollapsed] = useState(true)
     let cssH = styleH;
     let cssP = styleP;
+
+    // Change state on click
     function handleClick() {
         if (isCollapsed === true) {
             setIsCollapsed(false);
@@ -22,6 +24,7 @@ function Collapse({ styleH, styleP, title, description }) {
         }
     }
 
+    // Check if property is an array
     function isArray() {
         return Array.isArray(description)
     }
