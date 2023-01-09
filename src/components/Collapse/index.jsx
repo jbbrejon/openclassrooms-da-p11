@@ -32,7 +32,7 @@ function Collapse({ styleH, styleP, title, description }) {
     return isCollapsed ? (
         <div className={`${styles.dropdown}`} >
             <div className={`${styles.bar}`} >
-                <h2 className={`${styles[cssH]}`}>{title}</h2>
+                <div className={`${styles[cssH]}`}>{title}</div>
                 <img className={`${styles.chevron}`} src={chevronDown} alt="chevron-down" onClick={() => handleClick()} />
             </div>
         </div>
@@ -42,7 +42,7 @@ function Collapse({ styleH, styleP, title, description }) {
             isArray() ? (
                 <div className={`${styles.dropdown}`} >
                     <div className={`${styles.bar}`} >
-                        <h2 className={`${styles[cssH]}`}>{title}</h2>
+                        <div className={`${styles[cssH]}`}>{title}</div>
                         <img className={`${styles.chevron}`} src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
                     </div>
 
@@ -57,7 +57,7 @@ function Collapse({ styleH, styleP, title, description }) {
                 : (
                     <div className={`${styles.dropdown}`} >
                         <div className={`${styles.bar}`} >
-                            <h2 className={`${styles[cssH]}`}>{title}</h2>
+                            <div className={`${styles[cssH]}`}>{title}</div>
                             <img className={`${styles.chevron}`} src={chevronUp} alt="chevron-up" onClick={() => handleClick()} />
                         </div>
                         <p className={`${styles[cssP]} ${styles.para}`}>{description}</p>
