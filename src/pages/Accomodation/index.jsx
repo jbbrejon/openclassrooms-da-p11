@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 // Import components
 import Carousel from '../../components/Carousel'
 import Collapse from '../../components/Collapse'
+import Tag from '../../components/Tag'
 
 // Import data
 import accomodations from "../../data/logements.json"
@@ -57,7 +58,8 @@ function Accomodation() {
 
                 <ul className={`${styles.tags}`}>
                     {item[0].tags.map((tag) => (
-                        <li className={`${styles.tag}`} key={tag}>{tag}</li>
+
+                        <Tag key={tag} tag={tag}></Tag>
                     ))}
                 </ul>
                 <div className={`${styles.stars}`}>
