@@ -10,7 +10,7 @@
 .banner {
     grid-area: banner;
     height: 223px;
-    margin-top: 68.36px;
+    margin-top: 49.36px;
     background-color: black;
     border-radius: 25px;
 }
@@ -32,7 +32,7 @@
 @media (width <=992px) {
 
     .banner {
-        margin-top: 20px;
+        margin-top: 17px;
     }
 
     .section {
