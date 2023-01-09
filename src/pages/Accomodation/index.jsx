@@ -1,5 +1,6 @@
 // Import React module
 import { useParams } from 'react-router-dom'
+import Error from '../../components/Error'
 
 // Import components
 import Carousel from '../../components/Carousel'
@@ -17,32 +18,46 @@ import starBlank from '../../assets/star-blank.svg'
 import styles from '../../styles/Accomodation.module.css'
 
 
+
+
 function Accomodation() {
     const { id } = useParams();
     let item = accomodations.filter((accomodation) => accomodation.id === id)
+    let filledStars;
+    let blankStars;
 
-    // Return filled star
-    function Positive() {
-        return <img className={`${styles.star}`} src={starFilled} alt="" />
+    function isValid() {
+        if (item.length === 0) {
+            console.warn(`Aucun logement trouvé avec l'id: ${id}`)
+            return false
+        }
+        else {
+            // Return list of filled stars (positive opinion)
+            filledStars = Array.from({ length: item[0].rating }, (_, index) => {
+                return <Positive key={index} />;
+            });
+
+            // Return list of blank stars (negative opinion)
+            blankStars = Array.from({ length: 5 - item[0].rating }, (_, index) => {
+                return <Negative key={index} />;
+            });
+
+
+            // Return filled star
+            function Positive() {
+                return <img className={`${styles.star}`} src={starFilled} alt="" />
+            }
+
+            // Return blank star
+            function Negative() {
+                return <img className={`${styles.star}`} src={starBlank} alt="" />
+            }
+            return true
+        }
     }
 
-    // Return blank star
-    function Negative() {
-        return <img className={`${styles.star}`} src={starBlank} alt="" />
-    }
 
-    // Return list of filled stars (positive opinion)
-    const filledStars = Array.from({ length: item[0].rating }, (_, index) => {
-        return <Positive key={index} />;
-    });
-
-    // Return list of blank stars (negative opinion)
-    const blankStars = Array.from({ length: 5 - item[0].rating }, (_, index) => {
-        return <Negative key={index} />;
-    });
-
-
-    return (
+    return isValid() ? (
         <main className={`${styles.main}`}>
             <Carousel pictures={item[0].pictures}></Carousel>
             <div className={`${styles.properties}`}>
@@ -88,6 +103,10 @@ function Accomodation() {
             </div>
         </main>
     )
+        : (
+            <Error></Error>
+        )
+
 }
 
 export default Accomodation
