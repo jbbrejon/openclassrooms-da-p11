@@ -4,21 +4,39 @@ body {
   font-weight: 500;
 }
 
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "container"
+    "footer";
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
 .container {
+  grid-area: container;
   display: grid;
   grid-template-areas:
     "header"
     "main";
   grid-template-columns: 1fr;
-  max-width: 1240px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
   padding: 0 100px;
-  margin: auto;
 }
 
 /* Media queries */
 @media (width <=992px) {
 
-  .container {
+  main {
     padding: 20px;
   }
 

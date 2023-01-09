@@ -1,4 +1,5 @@
 footer {
+    grid-area: footer;
     display: grid;
     grid-template-areas:
         "logo"
@@ -8,13 +9,15 @@ footer {
     align-items: center;
     background-color: black;
     margin-top: 50px;
+    width: 100%;
 }
+
 
 .logo {
     grid-area: logo;
     justify-self: center;
     height: 32px;
-    margin-top: 66px;
+    margin-top: 30px;
 }
 
 .info {
