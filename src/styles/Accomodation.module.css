@@ -81,21 +81,6 @@
     margin-top: 20px;
 }
 
-.tag {
-    height: 25px;
-    min-width: 105px;
-    background-color: #FF6060;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0 10px 10px 0;
-    padding: 5px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .stars {
     grid-area: stars;
     justify-self: end;
@@ -150,16 +135,6 @@
 
     .host {
         justify-self: end;
-    }
-
-    .tag {
-        height: 18px;
-        width: 74px;
-        font-size: 10px;
-        margin-right: 10px;
-        border-radius: 10px;
-        padding: 0;
-
     }
 
     .stars {
